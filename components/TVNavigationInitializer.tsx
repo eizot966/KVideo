@@ -8,6 +8,7 @@
 import { useEffect } from 'react';
 import { useIsTV } from '@/lib/contexts/TVContext';
 import { useSpatialNavigation } from '@/lib/hooks/useSpatialNavigation';
+import { useGamepadNavigation } from '@/lib/hooks/useGamepadNavigation';
 
 export function TVNavigationInitializer() {
   const isTV = useIsTV();
@@ -24,6 +25,7 @@ export function TVNavigationInitializer() {
   }, [isTV]);
 
   useSpatialNavigation(isTV);
+  useGamepadNavigation(isTV);
 
   return null;
 }

@@ -19,6 +19,7 @@ const TV_USER_AGENT_PATTERNS = [
   /netcast/i, // LG NetCast
   /viera/i, // Panasonic Viera
   /hbbtv/i,
+  /PlayStation/i, // PS4 / PS5
 ];
 
 export function useTVDetection(): boolean {

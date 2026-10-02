@@ -157,16 +157,20 @@ nav {
 }
 
 /* TV Mode Styles */
-body.tv-mode [data-focusable]:focus {
-    outline: 3px solid var(--accent-color);
-    outline-offset: 4px;
-    box-shadow: 0 0 0 6px rgba(0, 122, 255, 0.2);
-    transform: scale(1.03);
+body.tv-mode [data-focusable]:focus,
+body.tv-mode [data-focusable]:focus-visible {
+    outline: 3px solid #00f0ff !important;
+    outline-offset: 4px !important;
+    box-shadow: 0 0 25px rgba(0, 240, 255, 0.7), 0 0 0 6px rgba(0, 122, 255, 0.3) !important;
+    transform: scale(1.04) !important;
     transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
+    z-index: 50;
 }
 
 body.tv-mode {
     font-size: 18px;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 body.tv-mode [data-focusable] {
