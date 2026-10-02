@@ -146,7 +146,17 @@ export function useGamepadNavigation(enabled: boolean) {
         }
         prev['btnR1'] = btnR1;
 
-        // 6. D-pad & Left Stick Directional Navigation
+        // 6. R3 (Right Stick Click, Button 11) or Options (Button 9) -> Toggle Web Fullscreen
+        const btnR3 = isPressed(11);
+        const btnOptions = isPressed(9);
+        if ((btnR3 && !prev['btnR3']) || (btnOptions && !prev['btnOptions'])) {
+          // Dispatch key 'w' which toggles window/web fullscreen
+          triggerKey('w', 'KeyW', 87);
+        }
+        prev['btnR3'] = btnR3;
+        prev['btnOptions'] = btnOptions;
+
+        // 7. D-pad & Left Stick Directional Navigation
         const dUp = isPressed(12);
         const dDown = isPressed(13);
         const dLeft = isPressed(14);

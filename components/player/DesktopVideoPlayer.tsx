@@ -13,6 +13,7 @@ import { DanmakuCanvas } from './DanmakuCanvas';
 import { usePlayerSettings } from './hooks/usePlayerSettings';
 import { useDanmaku } from './hooks/useDanmaku';
 import { useIsIOS, useIsMobile } from '@/lib/hooks/mobile/useDeviceDetection';
+import { useIsTV } from '@/lib/contexts/TVContext';
 import { useDoubleTap } from '@/lib/hooks/mobile/useDoubleTap';
 import { settingsStore, DEFAULT_SEEK_STEP_SECONDS } from '@/lib/store/settings-store';
 import { premiumModeSettingsStore } from '@/lib/store/premium-mode-settings';
@@ -145,12 +146,13 @@ export function DesktopVideoPlayer({
     };
   }, [updateViewportMetrics]);
 
-  // Use user preference for fullscreen type, resolving 'auto' to device default
+  const isTV = useIsTV();
   // Auto Rules:
+  // - TV / PS5: Window Fullscreen (PS5 WebKit limits requestFullscreen, window mode fills 100% viewport)
   // - Mobile: Window Fullscreen (Better for Danmaku/Controls)
   // - Desktop: Native Fullscreen (Better for PiP/Performance)
   const fullscreenType = settingsFullscreenType === 'auto'
-    ? (isIOS ? 'window' : isMobile ? 'window' : 'native') // Treat all mobile as window for consistency if auto
+    ? (isTV ? 'window' : isIOS ? 'window' : isMobile ? 'window' : 'native')
     : settingsFullscreenType;
 
   const isLandscape = viewportMetrics.width > viewportMetrics.height;
@@ -282,6 +284,7 @@ export function DesktopVideoPlayer({
     handleMouseMove,
     handleTouchToggleControls,
     togglePlay,
+    toggleFullscreen,
     handlePlay,
     handlePause,
     handleTimeUpdateEvent,
@@ -384,6 +387,9 @@ export function DesktopVideoPlayer({
             onCanPlay={() => setIsLoading(false)}
             onClick={!isMobile ? () => {
               togglePlay();
+            } : undefined}
+            onDoubleClick={!isMobile ? () => {
+              toggleFullscreen();
             } : undefined}
             onTouchStart={isMobile ? handleTap : undefined}
             {...LEGACY_INLINE_VIDEO_PROPS} // Legacy iOS support

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Icons } from '@/components/ui/Icon';
-
-
+import { useIsTV } from '@/lib/contexts/TVContext';
 
 interface DesktopRightControlsProps {
     isNativeFullscreen: boolean;
@@ -28,11 +27,13 @@ export function DesktopRightControls({
     onShowAirPlayMenu,
     onShowCastMenu
 }: DesktopRightControlsProps) {
+    const isTV = useIsTV();
+
     return (
         <div className="player-controls-right relative z-50 flex shrink-0 items-center gap-3">
             {/* Picture-in-Picture */}
             {
-                isPiPSupported && (
+                !isTV && isPiPSupported && (
                     <button
                         onClick={onTogglePictureInPicture}
                         className="btn-icon shrink-0"
@@ -46,7 +47,7 @@ export function DesktopRightControls({
 
             {/* AirPlay */}
             {
-                isAirPlaySupported && (
+                !isTV && isAirPlaySupported && (
                     <button
                         onClick={onShowAirPlayMenu}
                         className="btn-icon shrink-0"
@@ -60,7 +61,7 @@ export function DesktopRightControls({
 
             {/* Google Cast */}
             {
-                isCastAvailable && (
+                !isTV && isCastAvailable && (
                     <button
                         onClick={onShowCastMenu}
                         className="btn-icon shrink-0"
@@ -72,7 +73,7 @@ export function DesktopRightControls({
                 )
             }
 
-            {/* Web Fullscreen */}
+            {/* Web Fullscreen (Always available, primary on TV/PS5) */}
             <button
                 onClick={onToggleWebFullscreen}
                 className="btn-icon shrink-0"
@@ -84,15 +85,15 @@ export function DesktopRightControls({
                     : <Icons.WebFullscreen size={20} />}
             </button>
 
-            {/* Native Fullscreen */}
+            {/* Native Fullscreen / Fullscreen on TV */}
             <button
-                onClick={onToggleNativeFullscreen}
+                onClick={isTV ? onToggleWebFullscreen : onToggleNativeFullscreen}
                 className="btn-icon shrink-0"
-                aria-label={isNativeFullscreen ? '退出系统全屏' : '系统全屏'}
-                title={isNativeFullscreen ? '退出系统全屏 (F)' : '系统全屏 (F)'}
+                aria-label={(isNativeFullscreen || (isTV && isWebFullscreen)) ? '退出全屏' : '全屏'}
+                title={(isNativeFullscreen || (isTV && isWebFullscreen)) ? '退出全屏 (F/W)' : '全屏 (F/W)'}
             >
-                {isNativeFullscreen ? <Icons.Minimize size={20} /> : <Icons.Maximize size={20} />}
+                {(isNativeFullscreen || (isTV && isWebFullscreen)) ? <Icons.Minimize size={20} /> : <Icons.Maximize size={20} />}
             </button>
-        </div >
+        </div>
     );
 }

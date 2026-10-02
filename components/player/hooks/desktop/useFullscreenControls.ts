@@ -222,16 +222,8 @@ export function useFullscreenControls({
             setIsFullscreen(true);
             await lockLandscape();
         } catch (error) {
-            console.warn('Fullscreen request failed, trying fallback:', error);
-            if (video?.webkitEnterFullscreen) {
-                try {
-                    video.webkitEnterFullscreen();
-                    setFullscreenMode('native');
-                    setIsFullscreen(true);
-                } catch (fallbackError) {
-                    console.error('Final fullscreen fallback failed:', fallbackError);
-                }
-            }
+            console.warn('Fullscreen request failed, trying window fallback:', error);
+            await enterWindowFullscreen();
         }
     }, [
         containerRef,
