@@ -28,20 +28,10 @@ export function useTVDetection(): boolean {
   useEffect(() => {
     const ua = navigator.userAgent;
 
-    // Check UA for TV indicators
+    // Check UA for genuine TV or PlayStation indicators
     const uaMatch = TV_USER_AGENT_PATTERNS.some(pattern => pattern.test(ua));
 
     if (uaMatch) {
-      setIsTV(true);
-      return;
-    }
-
-    // Fallback heuristic: large screen + no touch + low pixel density
-    const isLargeScreen = window.innerWidth >= 1280;
-    const hasNoTouch = !('ontouchstart' in window) && navigator.maxTouchPoints === 0;
-    const lowDensity = window.devicePixelRatio <= 1.5;
-
-    if (isLargeScreen && hasNoTouch && lowDensity) {
       setIsTV(true);
     }
   }, []);

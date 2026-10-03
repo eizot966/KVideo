@@ -73,7 +73,7 @@ export function DesktopRightControls({
                 )
             }
 
-            {/* Web Fullscreen (Always available, primary on TV/PS5) */}
+            {/* Web Fullscreen */}
             <button
                 onClick={onToggleWebFullscreen}
                 className="btn-icon shrink-0"
@@ -85,15 +85,17 @@ export function DesktopRightControls({
                     : <Icons.WebFullscreen size={20} />}
             </button>
 
-            {/* Native Fullscreen / Fullscreen on TV */}
-            <button
-                onClick={isTV ? onToggleWebFullscreen : onToggleNativeFullscreen}
-                className="btn-icon shrink-0"
-                aria-label={(isNativeFullscreen || (isTV && isWebFullscreen)) ? '退出全屏' : '全屏'}
-                title={(isNativeFullscreen || (isTV && isWebFullscreen)) ? '退出全屏 (F/W)' : '全屏 (F/W)'}
-            >
-                {(isNativeFullscreen || (isTV && isWebFullscreen)) ? <Icons.Minimize size={20} /> : <Icons.Maximize size={20} />}
-            </button>
+            {/* Native Fullscreen (Desktop PC / Mac only, hidden on TV/PS5 to prevent duplicate/confusing behavior) */}
+            {!isTV && (
+                <button
+                    onClick={onToggleNativeFullscreen}
+                    className="btn-icon shrink-0"
+                    aria-label={isNativeFullscreen ? '退出系统全屏' : '系统全屏'}
+                    title={isNativeFullscreen ? '退出系统全屏 (F)' : '系统全屏 (F)'}
+                >
+                    {isNativeFullscreen ? <Icons.Minimize size={20} /> : <Icons.Maximize size={20} />}
+                </button>
+            )}
         </div>
     );
 }

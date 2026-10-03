@@ -205,24 +205,49 @@ export function useFullscreenControls({
             exitWindowFullscreen();
         }
 
+        let enterSucceeded = false;
+
         try {
             if (container.requestFullscreen) {
                 await container.requestFullscreen();
+                enterSucceeded = true;
             } else if (container.webkitRequestFullscreen) {
                 await container.webkitRequestFullscreen();
+                enterSucceeded = true;
             } else if (container.mozRequestFullScreen) {
                 await container.mozRequestFullScreen();
+                enterSucceeded = true;
             } else if (container.msRequestFullscreen) {
                 await container.msRequestFullscreen();
-            } else if (video?.webkitEnterFullscreen) {
-                video.webkitEnterFullscreen();
+                enterSucceeded = true;
             }
+        } catch (containerErr) {
+            console.warn('Container requestFullscreen failed, attempting video element fullscreen:', containerErr);
+        }
 
+        if (!enterSucceeded && video) {
+            try {
+                if (video.requestFullscreen) {
+                    await video.requestFullscreen();
+                    enterSucceeded = true;
+                } else if (video.webkitRequestFullscreen) {
+                    await video.webkitRequestFullscreen();
+                    enterSucceeded = true;
+                } else if (video.webkitEnterFullscreen) {
+                    video.webkitEnterFullscreen();
+                    enterSucceeded = true;
+                }
+            } catch (videoErr) {
+                console.warn('Video element fullscreen failed:', videoErr);
+            }
+        }
+
+        if (enterSucceeded) {
             setFullscreenMode('native');
             setIsFullscreen(true);
             await lockLandscape();
-        } catch (error) {
-            console.warn('Fullscreen request failed, trying window fallback:', error);
+        } else {
+            console.warn('Native fullscreen completely unsupported, falling back to window fullscreen');
             await enterWindowFullscreen();
         }
     }, [
