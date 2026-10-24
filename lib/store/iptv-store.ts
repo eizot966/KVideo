@@ -141,7 +141,7 @@ export const useIPTVStore = create<IPTVStore>()(
       sources: [
         {
           id: 'iptv-builtin-aniu',
-          name: '阿牛影院精选好莱坞与电视直播',
+          name: '阿牛影院港台新马与好莱坞精选',
           url: '/iptv.m3u',
           addedAt: 1,
           kind: 'builtin',

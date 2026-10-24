@@ -40,6 +40,7 @@ interface IPTVPlayerProps {
 }
 
 function getProxiedUrl(url: string, ua?: string, referer?: string): string {
+  if (url.startsWith('/api/iptv/stream')) return url;
   let proxyUrl = `/api/iptv/stream?`;
   if (ua) proxyUrl += `ua=${encodeURIComponent(ua)}&`;
   if (referer) proxyUrl += `referer=${encodeURIComponent(referer)}&`;
@@ -247,10 +248,11 @@ export function IPTVPlayer({ channel, onClose, channels, onChannelChange, channe
 
     const proxiedUrl = getProxiedUrl(url, channel.httpUserAgent, channel.httpReferrer);
     const hasCustomHeaders = !!(channel.httpUserAgent || channel.httpReferrer);
-    // When custom headers are needed, skip direct attempt (browsers cannot set
-    // User-Agent on XHR/fetch). Always go through our proxy which can forward
-    // the headers server-side. This fixes audio-only issues on CCTV and similar.
-    const initialUrl = hasCustomHeaders ? proxiedUrl : url;
+    const isHttpsPage = typeof window !== 'undefined' && window.location.protocol === 'https:';
+    const isHttpStream = url.startsWith('http://');
+    // When custom headers are needed or loading an insecure http stream on https page (mixed content),
+    // skip direct attempt and route through our proxy immediately.
+    const initialUrl = (hasCustomHeaders || (isHttpsPage && isHttpStream)) ? proxiedUrl : url;
 
     // Global loading timeout
     let loadingResolved = false;
@@ -282,7 +284,7 @@ export function IPTVPlayer({ channel, onClose, channels, onChannelChange, channe
       const hls = new Hls(HLS_LIVE_CONFIG);
       hlsRef.current = hls;
 
-      let triedProxy = false;
+      let triedProxy = initialUrl === proxiedUrl;
       let triedDirect = false;
 
       const tryDirectVideo = (directUrl: string) => {

@@ -1,57 +1,79 @@
-#EXTM3U name="阿牛私人影院精选直播"
-#EXTINF:-1 tvg-id="HBO" tvg-name="HBO HD" tvg-logo="https://epg.112114.xyz/logo/HBO.png" group-title="🎬 好莱坞影院",HBO HD
+#EXTM3U name="阿牛私人影院·港台新马与好莱坞精选直播"
+
+#EXTINF:-1 tvg-id="Channel8" tvg-name="新加坡 8频道 HD" tvg-logo="https://epg.pw/media/images/channel/2023/09/22/large/20230922164216308037_71.png" group-title="🇸🇬 新加坡华语精品 (中文/国语/中字)",新加坡 8频道 (Channel 8 国语综合)
+https://cdn.qd.je/163189/ch8
+
+#EXTINF:-1 tvg-id="ChannelU" tvg-name="新加坡 U频道 HD" group-title="🇸🇬 新加坡华语精品 (中文/国语/中字)",新加坡 U频道 (Channel U 华语娱乐)
+https://cdn.qd.je/163189/chu
+
+#EXTINF:-1 tvg-id="Channel5" tvg-name="新加坡 5频道 HD" group-title="🇸🇬 新加坡华语精品 (中文/国语/中字)",新加坡 5频道 (Channel 5 亚洲综合)
+https://cdn.qd.je/163189/ch5
+
+#EXTINF:-1 tvg-id="Phoenix" tvg-name="凤凰卫视中文台" tvg-logo="https://epg.112114.xyz/logo/凤凰卫视中文台.png" group-title="🇭🇰 港澳大牌与电影 (国粤双语/中字)",凤凰卫视中文台 (国语旗舰/华语大牌)
+https://playtv-live.ifeng.com/live/06OLEGEGM4G.m3u8
+
+#EXTINF:-1 tvg-id="PhoenixHK" tvg-name="凤凰卫视香港台" tvg-logo="https://epg.112114.xyz/logo/凤凰卫视香港台.png" group-title="🇭🇰 港澳大牌与电影 (国粤双语/中字)",凤凰卫视香港台 (粤语资讯/大湾区)
+http://php.jdshipin.com/TVOD/iptv.php?id=fhhk
+
+#EXTINF:-1 tvg-id="Jade" tvg-name="TVB 翡翠台" tvg-logo="https://epg.112114.xyz/logo/翡翠台.png" group-title="🇭🇰 港澳大牌与电影 (国粤双语/中字)",TVB 翡翠台 (Jade HD 粤语王牌)
+http://php.jdshipin.com:8880/TVOD/iptv.php
+
+#EXTINF:-1 tvg-id="Pearl" tvg-name="TVB 明珠台" tvg-logo="https://epg.112114.xyz/logo/明珠台.png" group-title="🇭🇰 港澳大牌与电影 (国粤双语/中字)",TVB 明珠台 (Pearl HD 中字国际电影)
+http://php.jdshipin.com:8880/TVOD/iptv.php
+
+#EXTINF:-1 tvg-id="J2" tvg-name="TVB J2台" tvg-logo="https://epg.112114.xyz/logo/J2.png" group-title="🇭🇰 港澳大牌与电影 (国粤双语/中字)",TVB J2 综合娱乐 (TVB Plus HD 中文字幕)
+http://php.jdshipin.com:8880/PLTV/iptv.php?id=j2
+
+#EXTINF:-1 tvg-id="TVBClassic" tvg-name="TVB 千禧经典台" group-title="🇭🇰 港澳大牌与电影 (国粤双语/中字)",TVB 千禧经典台 (TVB Classic 港剧港片)
+http://php.jdshipin.com/TVOD/iptv.php?id=tvbc
+
+#EXTINF:-1 tvg-id="MeiAhMandarin" tvg-name="美亚电影台(国语)" group-title="🇭🇰 港澳大牌与电影 (国粤双语/中字)",美亚电影台 (国语电影大片)
+http://php.jdshipin.com:8880/TVOD/iptv.php
+
+#EXTINF:-1 tvg-id="MeiAhCantonese" tvg-name="美亚电影台(粤语)" group-title="🇭🇰 港澳大牌与电影 (国粤双语/中字)",美亚电影台 (粤语经典港片)
+http://php.jdshipin.com:8880/TVOD/iptv.php
+
+#EXTINF:-1 tvg-id="ViuTV" tvg-name="香港 ViuTV" tvg-logo="https://epg.112114.xyz/logo/ViuTV.png" group-title="🇭🇰 港澳大牌与电影 (国粤双语/中字)",香港 ViuTV (香港电视娱乐 繁中字幕)
+http://php.jdshipin.com:8880/PLTV/iptv.php?id=viutv
+
+#EXTINF:-1 tvg-id="RTHK31" tvg-name="港台电视 31" tvg-logo="https://epg.112114.xyz/logo/RTHK31.png" group-title="🇭🇰 港澳大牌与电影 (国粤双语/中字)",港台电视 31 (RTHK TV 31 HD 中文综合)
+http://free.cnlive.club/channel/n8badbb5/index.m3u8?q=1752629214236
+
+#EXTINF:-1 tvg-id="RTHK32" tvg-name="港台电视 32" tvg-logo="https://epg.112114.xyz/logo/RTHK32.png" group-title="🇭🇰 港澳大牌与电影 (国粤双语/中字)",港台电视 32 (RTHK TV 32 HD 直播台)
+http://free.cnlive.club/channel/n8badbb4/index.m3u8?q=1752629214236
+
+#EXTINF:-1 tvg-id="GlobalNews" tvg-name="寰宇新闻台" group-title="🇹🇼 台湾华语精选 (台湾国语/繁中字幕)",寰宇新闻台 (Global News HD 台湾国语)
+https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV02.m3u8
+
+#EXTINF:-1 tvg-id="CTiAsia" tvg-name="中天亚洲台" tvg-logo="https://epg.112114.xyz/logo/中天亚洲.png" group-title="🇹🇼 台湾华语精选 (台湾国语/繁中字幕)",中天亚洲台 (CTi Asia HD 台湾国语/繁中)
+https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV13.m3u8
+
+#EXTINF:-1 tvg-id="SETTaiwan" tvg-name="三立台湾台" tvg-logo="https://epg.112114.xyz/logo/三立台湾.png" group-title="🇹🇼 台湾华语精选 (台湾国语/繁中字幕)",三立台湾台 (SET Taiwan 综合台/繁中)
+http://free.cnlive.club/channel/642f20a/index.m3u8?q=1752629214236
+
+#EXTINF:-1 tvg-id="EBCGeneral" tvg-name="东森综合台" tvg-logo="https://epg.112114.xyz/logo/东森综合.png" group-title="🇹🇼 台湾华语精选 (台湾国语/繁中字幕)",东森综合台 (EBC General HD 台湾综艺)
+http://free.cnlive.club/channel/n31b0a4/index.m3u8?q=1752629214236
+
+#EXTINF:-1 tvg-id="HBO" tvg-name="HBO HD" tvg-logo="https://epg.112114.xyz/logo/HBO.png" group-title="🌐 国际好莱坞大片 (英语原声/大姐专区)",HBO HD (好莱坞大片高清)
 https://streaming.onnethn.com/HBO/playlist.m3u8
 
-#EXTINF:-1 tvg-id="HBO2" tvg-name="HBO 2 HD" tvg-logo="https://epg.112114.xyz/logo/HBO.png" group-title="🎬 好莱坞影院",HBO 2 HD
+#EXTINF:-1 tvg-id="HBO2" tvg-name="HBO 2 HD" tvg-logo="https://epg.112114.xyz/logo/HBO.png" group-title="🌐 国际好莱坞大片 (英语原声/大姐专区)",HBO 2 HD (好莱坞大片 2台)
 https://streaming.onnethn.com/HBO2/playlist.m3u8
 
-#EXTINF:-1 tvg-id="AXN" tvg-name="AXN 电影高清" tvg-logo="https://epg.112114.xyz/logo/AXN.png" group-title="🎬 好莱坞影院",AXN 电影高清 (双语)
+#EXTINF:-1 tvg-id="AXN" tvg-name="AXN 电影高清" tvg-logo="https://epg.112114.xyz/logo/AXN.png" group-title="🌐 国际好莱坞大片 (英语原声/大姐专区)",AXN 电影高清 (动作惊悚大片)
 https://streaming.onnethn.com/AXN_HD/playlist.m3u8
 
-#EXTINF:-1 tvg-id="WarnerTV" tvg-name="华纳电影台" tvg-logo="https://epg.112114.xyz/logo/WarnerTV.png" group-title="🎬 好莱坞影院",华纳电影台 (Warner TV)
+#EXTINF:-1 tvg-id="WarnerTV" tvg-name="华纳电影台" tvg-logo="https://epg.112114.xyz/logo/WarnerTV.png" group-title="🌐 国际好莱坞大片 (英语原声/大姐专区)",华纳电影台 (Warner TV HD)
 https://streaming.onnethn.com/WB/playlist.m3u8
 
-#EXTINF:-1 tvg-id="Cinemax" tvg-name="CINEMAX 经典电影" tvg-logo="https://epg.112114.xyz/logo/Cinemax.png" group-title="🎬 好莱坞影院",CINEMAX 经典电影
+#EXTINF:-1 tvg-id="Cinemax" tvg-name="CINEMAX 经典电影" tvg-logo="https://epg.112114.xyz/logo/Cinemax.png" group-title="🌐 国际好莱坞大片 (英语原声/大姐专区)",CINEMAX 经典电影 (动作枪战)
 https://streaming.onnethn.com/CINEMAX/playlist.m3u8
 
-#EXTINF:-1 tvg-id="StarMovies" tvg-name="STAR 卫视电影台" group-title="🎬 好莱坞影院",STAR 卫视电影台
+#EXTINF:-1 tvg-id="StarMovies" tvg-name="STAR 卫视电影台" group-title="🌐 国际好莱坞大片 (英语原声/大姐专区)",STAR 卫视电影台 (Star Channel)
 https://streaming.onnethn.com/STAR_CHANNEL/playlist.m3u8
 
-#EXTINF:-1 tvg-id="FOX" tvg-name="FOX 电影台" tvg-logo="https://epg.112114.xyz/logo/FOX.png" group-title="🎬 好莱坞影院",FOX 电影台
+#EXTINF:-1 tvg-id="FOX" tvg-name="FOX 电影台" tvg-logo="https://epg.112114.xyz/logo/FOX.png" group-title="🌐 国际好莱坞大片 (英语原声/大姐专区)",FOX 电影台 (FOX Movies HD)
 https://streaming.onnethn.com/FOX/playlist.m3u8
 
-#EXTINF:-1 tvg-id="Universal" tvg-name="环球影业 HD" group-title="🎬 好莱坞影院",环球影业 (Universal HD)
-https://streaming.onnethn.com/UNIVERSAL_HD/playlist.m3u8
-
-#EXTINF:-1 tvg-id="TCM" tvg-name="特纳经典电影 TCM" group-title="🎬 好莱坞影院",特纳经典电影 (TCM HD)
-https://streaming.onnethn.com/TCM_HD/playlist.m3u8
-
-#EXTINF:-1 tvg-id="Space" tvg-name="SPACE 动作科幻电影" group-title="🎬 好莱坞影院",SPACE 动作科幻电影
-https://streaming.onnethn.com/SPACE_HD/playlist.m3u8
-
-#EXTINF:-1 tvg-id="TNT" tvg-name="TNT 系列大片台" tvg-logo="https://epg.112114.xyz/logo/TNT.png" group-title="🎬 好莱坞影院",TNT 系列大片台
-https://streaming.onnethn.com/TNT_SERIES/playlist.m3u8
-
-#EXTINF:-1 tvg-id="Lifetime" tvg-name="LIFETIME 精彩剧场" tvg-logo="https://epg.112114.xyz/logo/Lifetime.png" group-title="🎬 好莱坞影院",LIFETIME 精彩剧场
-https://streaming.onnethn.com/LIFETIME/playlist.m3u8
-
-#EXTINF:-1 tvg-id="Discovery" tvg-name="探索极速频道" tvg-logo="https://epg.112114.xyz/logo/Discovery.png" group-title="🌍 探索与纪录",探索极速频道 (Discovery Turbo)
+#EXTINF:-1 tvg-id="Discovery" tvg-name="探索极速频道" tvg-logo="https://epg.112114.xyz/logo/Discovery.png" group-title="🌐 国际好莱坞大片 (英语原声/大姐专区)",探索极速频道 (Discovery Turbo HD)
 https://streaming.onnethn.com/DISCOVERY_TURBO/playlist.m3u8
-
-#EXTINF:-1 tvg-id="BBC" tvg-name="BBC 新闻纪录" tvg-logo="https://epg.112114.xyz/logo/BBC.png" group-title="🌍 探索与纪录",BBC 新闻纪录
-https://streaming.onnethn.com/BBC/playlist.m3u8
-
-#EXTINF:-1 tvg-id="E" tvg-name="E! 娱乐频道" group-title="📺 娱乐与综艺",E! 娱乐频道 (E! Entertainment)
-https://streaming.onnethn.com/E_ENTERTAINMENT/playlist.m3u8
-
-#EXTINF:-1 tvg-id="HGTV" tvg-name="HGTV 居家生活" group-title="📺 娱乐与综艺",HGTV 居家生活频道
-https://streaming.onnethn.com/HGTV/playlist.m3u8
-
-#EXTINF:-1 tvg-id="Tooncast" tvg-name="TOONCAST 经典动画" group-title="🎨 少儿与音乐",TOONCAST 经典动画
-https://streaming.onnethn.com/TOONCAST/playlist.m3u8
-
-#EXTINF:-1 tvg-id="Cartoonito" tvg-name="CARTOONITO 幼教动画" group-title="🎨 少儿与音乐",CARTOONITO 幼教动画
-https://streaming.onnethn.com/CARTOONITO/playlist.m3u8
-
-#EXTINF:-1 tvg-id="MTV" tvg-name="MTV 流行音乐" tvg-logo="https://epg.112114.xyz/logo/MTV.png" group-title="🎨 少儿与音乐",MTV 流行音乐台
-https://streaming.onnethn.com/MTV/playlist.m3u8
