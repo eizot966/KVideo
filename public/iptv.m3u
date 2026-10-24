@@ -54,6 +54,39 @@ http://free.cnlive.club/channel/642f20a/index.m3u8?q=1752629214236
 #EXTINF:-1 tvg-id="EBCGeneral" tvg-name="东森综合台" tvg-logo="https://epg.112114.xyz/logo/东森综合.png" group-title="🇹🇼 台湾华语精选 (台湾国语/繁中字幕)",东森综合台 (EBC General HD 台湾综艺)
 http://free.cnlive.club/channel/n31b0a4/index.m3u8?q=1752629214236
 
+#EXTINF:-1 tvg-id="AnimalPlanet" tvg-name="动物星球 HD" tvg-logo="https://epg.pw/media/img/logo/Animal_Planet.jpg" group-title="🌿 动物星球与自然探索 (Discovery/国家地理/纪录片)",动物星球 (Animal Planet HD)
+https://drk6xq0vhn.gpcdn.net/live/animal_planet_hd_abr/index.m3u8
+
+#EXTINF:-1 tvg-id="NatGeo" tvg-name="国家地理 HD" tvg-logo="https://epg.pw/media/img/logo/National_Geographic.jpg" group-title="🌿 动物星球与自然探索 (Discovery/国家地理/纪录片)",国家地理频道 (National Geographic HD)
+https://barinaslive1.boldmss.com/NATGEO/NATGEO.isml/NATGEO.m3u8
+
+#EXTINF:-1 tvg-id="DiscoveryAsia" tvg-name="探索频道亚洲台" tvg-logo="https://epg.pw/media/img/logo/Discovery.jpg" group-title="🌿 动物星球与自然探索 (Discovery/国家地理/纪录片)",探索频道亚洲台 (Discovery Asia HD 中字)
+http://free.cnlive.club/channel/n3efbe5af.m3u8
+
+#EXTINF:-1 tvg-id="BBCEarth" tvg-name="BBC 地球自然纪录片" tvg-logo="https://epg.pw/media/img/logo/BBC_Earth.jpg" group-title="🌿 动物星球与自然探索 (Discovery/国家地理/纪录片)",BBC 地球自然纪录片 (BBC Earth HD 1080p)
+https://amg00793-amg00793c6-xumo-us-2669.playouts.now.amagi.tv/BBCStudios-BBCEarthA-hls/playlist.m3u8
+
+#EXTINF:-1 tvg-id="WildEarth" tvg-name="WildEarth 非洲野生动物直击" group-title="🌿 动物星球与自然探索 (Discovery/国家地理/纪录片)",WildEarth 野生动物实时直击 (1080p)
+https://dqga3jatxofgx.cloudfront.net/WildEarth.m3u8
+
+#EXTINF:-1 tvg-id="INWILD" tvg-name="荒野野生动物探索" group-title="🌿 动物星球与自然探索 (Discovery/国家地理/纪录片)",荒野动物探索 (INWILD HD 1080p)
+https://amg00861-terninternation-inwild-samsunguk-w5wic.amagi.tv/playlist/amg00861-terninternation-inwild-samsunguk/playlist.m3u8
+
+#EXTINF:-1 tvg-id="TerraMaterWILD" tvg-name="红牛旷野自然探索" group-title="🌿 动物星球与自然探索 (Discovery/国家地理/纪录片)",红牛旷野自然探索 (Terra Mater WILD 1080p)
+https://53ff3982.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmxheHhUVi1ldV9UZXJyYU1hdGVyV2lsZF9ITFM/playlist.m3u8
+
+#EXTINF:-1 tvg-id="DiscoveryFamily" tvg-name="探索家庭生活" tvg-logo="https://epg.pw/media/img/logo/Discovery.jpg" group-title="🌿 动物星球与自然探索 (Discovery/国家地理/纪录片)",探索家庭探索 (Discovery Family HD)
+https://tvsen5.aynaott.com/discoveryfamily/index.m3u8
+
+#EXTINF:-1 tvg-id="InvestigationDiscovery" tvg-name="探索调查发现" tvg-logo="https://epg.pw/media/img/logo/Discovery.jpg" group-title="🌿 动物星球与自然探索 (Discovery/国家地理/纪录片)",探索调查发现 (Investigation Discovery HD)
+https://drk6xq0vhn.gpcdn.net/live/id_hd_abr/index.m3u8
+
+#EXTINF:-1 tvg-id="BetterLifeNature" tvg-name="全球自然风景奇观" group-title="🌿 动物星球与自然探索 (Discovery/国家地理/纪录片)",全球自然风景奇观 (Better Life Nature 1080p)
+https://tgn.bozztv.com/betterlife/betternature/betternature/index.m3u8
+
+#EXTINF:-1 tvg-id="CGTNDoc" tvg-name="CGTN 纪录频道" tvg-logo="https://epg.112114.xyz/logo/CGTN纪录.png" group-title="🌿 动物星球与自然探索 (Discovery/国家地理/纪录片)",CGTN 纪录频道 (全景自然地理人文 HD)
+https://english-livetx.cgtn.com/hls/yypdjlctzb_hd.m3u8
+
 #EXTINF:-1 tvg-id="HBO" tvg-name="HBO HD" tvg-logo="https://epg.112114.xyz/logo/HBO.png" group-title="🌐 国际好莱坞大片 (英语原声/大姐专区)",HBO HD (好莱坞大片高清)
 https://streaming.onnethn.com/HBO/playlist.m3u8
 
