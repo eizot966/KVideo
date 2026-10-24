@@ -138,7 +138,15 @@ async function loadPlaylistChannels(
 export const useIPTVStore = create<IPTVStore>()(
   persist(
     (set, get) => ({
-      sources: [],
+      sources: [
+        {
+          id: 'iptv-builtin-aniu',
+          name: '阿牛影院精选好莱坞与电视直播',
+          url: '/iptv.m3u',
+          addedAt: 1,
+          kind: 'builtin',
+        },
+      ],
       cachedChannels: [],
       cachedGroups: [],
       cachedChannelsBySource: {},
