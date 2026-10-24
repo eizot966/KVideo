@@ -50,6 +50,7 @@ type FullscreenCapableElement = HTMLDivElement & {
 };
 
 type PiPCapableVideoElement = HTMLVideoElement & {
+    webkitRequestFullscreen?: () => Promise<void>;
     webkitEnterFullscreen?: () => void;
     webkitSupportsPresentationMode?: (mode: 'picture-in-picture') => boolean;
     webkitPresentationMode?: 'inline' | 'picture-in-picture' | string;
