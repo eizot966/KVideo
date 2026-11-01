@@ -1,7 +1,7 @@
 {
-    "name": "KVideo - 视频聚合平台",
-    "short_name": "KVideo",
-    "description": "多源视频聚合搜索和播放平台",
+    "name": "阿牛私人影院 - KVideo",
+    "short_name": "阿牛影院",
+    "description": "阿牛店长专属影视聚合搜索与播放平台",
     "start_url": "/",
     "display": "standalone",
     "background_color": "#000000",
@@ -10,7 +10,19 @@
     "icons": [
         {
             "src": "/icon.png",
+            "sizes": "512x512",
+            "type": "image/png",
             "purpose": "any maskable"
+        },
+        {
+            "src": "/icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
         }
     ],
     "categories": [
